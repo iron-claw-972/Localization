@@ -16,12 +16,35 @@ public class Pose {
 		this.heading = heading;
 	}
 	
-	public void translate(double x, double y) {
-		this.x += x;
-		this.y += y;
+	public void translate(double dx, double dy) {
+		this.x += dx;
+		this.y += dy;
 	}
-	
+
+	public void setCoordinates(double x, double y) {
+		this.x = x;
+		this.y = y;
+	}
+
 	public void rotate(double angle) {
 		this.heading += angle;
 	}
+
+	public void setHeading(double _heading) {
+		heading = _heading;
+	}
+
+	public double getX() {
+		return x;
+	}
+
+	public double getY() {
+		return y;
+	}
+
+	public double getHeading() {
+		return heading;
+	}
+	
+
 }

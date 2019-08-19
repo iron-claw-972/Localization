@@ -1,17 +1,23 @@
 package frc.team972.robot.statemachines;
 
-public enum ExampleState {
-    ON, OFF;
+public class ExampleState {
+    public enum state { //enums should be private and relegated to the state machine unless necessary, as it is in this case?
+        ON, OFF;
+    }
 
-    public ExampleState next(ExampleState state) {
-        switch (state) {
+    public state next(state _state) {
+       state returnState;
+       switch (_state) {
             case ON:
-                return OFF;
-                break;
+                returnState = state.OFF;
+                break; 
             case OFF:
-                return ON;
+                returnState = state.ON;
                 break;
-                
+            default:
+                System.out.println("invalid input");
+                return null;
         }
+        return returnState;
     }
 }

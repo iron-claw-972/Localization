@@ -11,9 +11,7 @@ public class Robot extends TimedRobot {
   private Subsystem[] subsystems = new Subsystem[] {exampleSubsystem};
   private SubsystemManager subsystemManager = new SubsystemManager(subsystems);
 
-  public ExampleState state = ExampleState.OFF;
-
-  private Pose pose = new Pose();
+  static Pose robotPose = new Pose();
 
 
     @Override
@@ -55,8 +53,4 @@ public class Robot extends TimedRobot {
     public void disabledInit() {
       subsystemManager.stopAll();
     }
-
-  public Pose getPose() {
-    return pose;
-  }
 }

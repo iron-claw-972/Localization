@@ -1,8 +1,9 @@
 package frc.team972.robot;
 
 
-public class Constants {
+static class Constants {
 
     //Add constants here...
+    public double robotWidth;
 
 }
